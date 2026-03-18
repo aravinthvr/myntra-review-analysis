@@ -46,7 +46,12 @@ st.markdown("""
 # --- 2. CORE UTILS & DATA REPAIR ---
 if not firebase_admin._apps:
     try:
-        cred = credentials.Certificate("serviceAccountKey.json")
+        # This reads the [firebase] section from your secrets
+        cred_dict = dict(st.secrets["firebase"])
+        # Ensure the private key handles newlines correctly
+        cred_dict["private_key"] = cred_dict["private_key"].replace("\\n", "\n")
+        
+        cred = credentials.Certificate(cred_dict)
         firebase_admin.initialize_app(cred)
     except: st.sidebar.warning("Firebase Creds Not Found")
 db = firestore.client() if firebase_admin._apps else None
