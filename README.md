@@ -37,8 +37,8 @@
 ### 2. Installation
 ```bash
 # Clone the repository
-git clone [https://github.com/yourusername/review-iq-pro.git](https://github.com/yourusername/review-iq-pro.git)
-cd review-iq-pro
+git clone [https://github.com/aravinthvr/myntra-review-analysis.git](https://github.com/aravinthvr/myntra-review-analysis.git)
+cd myntra-review-analysis
 
 # Install dependencies
 pip install -r requirements.txt
