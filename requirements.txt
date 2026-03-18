@@ -1,0 +1,6 @@
+streamlit
+google-generativeai
+beautifulsoup4
+firebase-admin
+pandas
+plotly
